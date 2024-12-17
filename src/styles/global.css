@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: "LovelyHome";
+  src: url("/public/LovelyHome.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Typography */
+  --font_Charm: "Charm, cursive";
+  --font_LH: "LovelyHome";
+  --font_Pop: "Poppins, sans-serif";
+
+  --h1_size: 8rem;
+  --h2_size: 2.4rem;
+  --h3_size: 2.1rem;
+  --p_size: 1rem;
+  --menu_size: 1.4rem;
+
+  --h1_color: var(--Secondary_Sand);
+  --h2_color: var(--Secondary_Sand);
+  --h3_color: var(--Secondary_Sand);
+  --p_color: var(--Black);
+  --menu_color: var(--Secondary_Sand);
+
+  /* Farver */
+  --Primary_Blue: #4662bf;
+  --Secondary_Sand: #ffe9b8;
+  --Tertiary_Red: #e4b99f;
+  --Black: #424245;
+
+  /* afstande */
+  --gap4: 4rem;
+  --gap2: 2rem;
+  --gap1: 1rem;
+  --gap05: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: var(--font_LH);
+  font-size: var(--h1_size);
+  color: var(--h1_color);
+}
+h2 {
+  font-family: var(--font_Charm);
+  font-size: var(--h2_size);
+  color: var(--h2_color);
+}
+h3 {
+  font-family: var(--font_Charm);
+  font-size: var(--h3_size);
+  color: var(--h3_color);
+}
+p {
+  font-family: var(--font_Pop);
+  font-size: var(--p_size);
+  color: var(--p_color);
+}
+a {
+  font-family: var(--font_Charm);
+  font-size: var(--menu_size);
+  color: var(--menu_color);
+}
