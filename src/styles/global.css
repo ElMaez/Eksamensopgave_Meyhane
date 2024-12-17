@@ -9,15 +9,15 @@
 
 :root {
   /* Typography */
-  --font_Charm: "Charm, cursive";
+  --font_Charm: "Charm", cursive;
   --font_LH: "LovelyHome";
-  --font_Pop: "Poppins, sans-serif";
+  --font_Pop: "Poppins", sans-serif;
 
   --h1_size: 8rem;
   --h2_size: 2.4rem;
   --h3_size: 2.1rem;
   --p_size: 1rem;
-  --menu_size: 1.4rem;
+  --menu_size: clamp(0.4rem, 2.5vw, 1.4rem);
 
   --h1_color: var(--Secondary_Sand);
   --h2_color: var(--Secondary_Sand);
@@ -36,6 +36,9 @@
   --gap2: 2rem;
   --gap1: 1rem;
   --gap05: 0.5rem;
+
+  /* Hover */
+  --menu_hover: var(--Primary_Blue);
 }
 
 * {
@@ -64,8 +67,6 @@ p {
   font-size: var(--p_size);
   color: var(--p_color);
 }
-a {
-  font-family: var(--font_Charm);
-  font-size: var(--menu_size);
-  color: var(--menu_color);
+li:hover {
+  text-decoration: underline 2px var(--Secondary_Sand);
 }
