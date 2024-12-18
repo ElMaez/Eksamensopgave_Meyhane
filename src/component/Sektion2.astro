@@ -8,7 +8,7 @@ const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYm
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-const { data, error } = await supabase.from("Product").select("*");
+const { data, error } = await supabase.from("product").select("*");
 
 if (error) {
   console.error("Supabase fejl:", error.message);
@@ -17,33 +17,26 @@ if (error) {
 }
 ---
 
-<h2>hej</h2>
 <section class="section2">
-  <!-- Dekoration øverst til venstre -->
+  <div><h2 class="topoverskrift">Upcomming Event</h2></div>
+  <!-- Dekoration blåblomst øverst til venstre -->
 
   <img src="/images/blaablomst.webp" alt="Blå Blomst" class="section2_decor section2_decor--top-left" loading="lazy" />
 
-  <!-- Dekoration øverst til højre -->
+  <!-- Dekoration vinflaske øverst til højre -->
   <img src="/images/blaaflaske.webp" alt="Blå Flaske" class="section2_decor section2_decor--top-right" loading="lazy" />
 
   <img src="/images/kaffekopogkande.webp" alt="Blå Flaske" class="section2_decor section2_decor--bottom-right" loading="lazy" />
 
-  <!-- Venstre Kolonne -->
-  <div class="section2_grid">
-    <!-- Venstre Kolonne -->
+  <!-- Grid Container -->
+  <div class="grid_container">
+    <!-- Venstre Grid -->
     <div class="section2_left">
       <img src="/images/menu.webp" alt="Menu" class="section2_menu-image" loading="lazy" />
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum expedita ipsum cumque alias, labore iusto sit ut enim obcaecati at, voluptatum voluptate quod exercitationem perferendis dignissimos numquam adipisci facilis esse! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro libero tempore sed sequi commodi asperiores eos incidunt voluptate quos, enim ea! Sunt est delectus modi quia explicabo in. Animi, sed? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum inventore numquam dolorem molestiae quo animi laudantium aliquid eveniet hic quidem nostrum rerum aliquam natus placeat, beatae, rem laboriosam tempore nulla?</p>
-      <div class="section2_button-container">
-        <div class="section2_button-wrapper">
-          <img src="/images/calltoaction.svg" alt="Book Now" class="section2_button-image" loading="lazy" />
-          <p class="section2_button-text">Book Now</p>
-        </div>
-      </div>
     </div>
 
-    <!-- Højre Kolonne -->
-
+    <!-- Højre Grid -->
     <div class="section2_right">
       <h2 class="section2_title">POP UP MEYHANE</h2>
       <p>06.08.2025 - 15:00</p>
@@ -64,41 +57,19 @@ if (error) {
     box-sizing: border-box;
   }
 
-  .section2 {
-    position: relative;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: var(--gap4) var(--gap2);
-    overflow: visible;
-    box-sizing: border-box;
-  }
-
-  .section2_header {
-    background-color: var(--Secondary_Sand);
-    padding: var(--gap2) 0;
-    text-align: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .section2_header-title {
-    font-family: var(--font_Charm);
-    font-size: 2.5rem;
-    color: var(--Black);
-  }
-
-  .section2_grid {
+  .grid_container {
     display: grid;
-    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: var(--gap1);
-    align-items: start;
+    align-items: center;
     padding: var(--gap1);
     background-color: var(--Tertiary_Red);
     box-sizing: border-box;
+    gap: 5%;
   }
 
   .section2_left {
     grid-column: 2;
-    margin-top: 5%;
     z-index: 1;
   }
 
@@ -118,28 +89,6 @@ if (error) {
   .section2_description {
     max-width: 400px;
     margin-bottom: var(--gap2);
-    margin-top: 50%;
-  }
-
-  .section2_button-container {
-    text-align: center;
-  }
-
-  .section2_button-wrapper {
-    position: relative;
-    display: inline-block;
-  }
-
-  .section2_button-image {
-    width: 180px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    margin-top: 15px;
-  }
-
-  .section2_button-image:hover {
-    transform: scale(1.05);
   }
 
   .section2_button-text {
@@ -174,20 +123,30 @@ if (error) {
   }
 
   .section2_decor--top-left {
-    top: -5%;
-    left: 7%;
-    width: 180px;
+    top: 3%;
+    left: 3%;
+    width: 240px;
   }
 
   .section2_decor--top-right {
-    top: 0;
+    top: 2%;
     right: 5%;
-    width: 170px;
+    width: 220px;
   }
 
   .section2_decor--bottom-right {
-    bottom: -2%;
-    right: 1%;
+    bottom: -155%;
+    right: -0%;
     width: 350px;
+  }
+  p {
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .topoverskrift {
+    color: var(--Primary_Blue);
+    text-align: center;
+    margin: 3%;
   }
 </style>
