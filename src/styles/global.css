@@ -13,10 +13,10 @@
   --font_LH: "LovelyHome";
   --font_Pop: "Poppins", sans-serif;
 
-  --h1_size: 8rem;
-  --h2_size: 2.4rem;
+  --h1_size: clamp(1rem, 6vw, 8rem);
+  --h2_size: clamp(1rem, 3vw, 2.4rem);
   --h3_size: 2.1rem;
-  --p_size: 1rem;
+  --p_size: clamp(0.4rem, 3vw, 1rem);
   --menu_size: clamp(0.4rem, 2.5vw, 1.4rem);
 
   --h1_color: var(--Secondary_Sand);
