@@ -9,9 +9,9 @@
 
 :root {
   /* Typography */
-  --font_Charm: "Charm, cursive";
+  --font_Charm: "Charm", cursive;
   --font_LH: "LovelyHome";
-  --font_Pop: "Poppins, sans-serif";
+  --font_Pop: "Poppins", sans-serif;
 
   --h1_size: 8rem;
   --h2_size: 2.4rem;
