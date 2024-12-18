@@ -25,6 +25,8 @@
   --p_color: var(--Black);
   --menu_color: var(--Secondary_Sand);
 
+  --p_ch: 65ch;
+
   /* Farver */
   --Primary_Blue: #4662bf;
   --Secondary_Sand: #ffe9b8;
