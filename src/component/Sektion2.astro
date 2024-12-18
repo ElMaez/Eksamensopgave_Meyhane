@@ -1,27 +1,30 @@
+---
+import "../styles/global.css"; // Importér global CSS
+---
+
 <section class="section2">
-  <!-- Øverste baggrund med titel -->
   <div class="section2__header">
     <h2 class="section2__header-title">Upcoming Event</h2>
   </div>
 
-  <!-- Dekoration øverst til venstre -->
   <img src="/images/blaablomst.webp" alt="Blå Blomst" class="section2__decor section2__decor--top-left" loading="lazy" />
+  <img src="/images/blaaflaske.webp" alt="Blå flaske" class="section2__decor section2__decor--top-right" loading="lazy" />
 
-  <!-- Grid layout -->
   <div class="section2__grid">
-    <!-- Venstre kolonne -->
     <div class="section2__left">
       <div class="section2__content-wrapper">
         <img src="/images/menu.webp" alt="Menu" class="section2__menu-image" loading="lazy" />
         <p class="section2__description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
-        <!-- Book Now-knap som billede -->
+
         <div class="section2__button-container">
-          <img src="/images/calltoaction.svg" alt="Book Now" class="section2__button-image" loading="lazy" />
+          <div class="section2__button-wrapper">
+            <img src="/images/calltoaction.svg" alt="Book Now" class="section2__button-image" loading="lazy" />
+            <p class="section2__button-text">Book Now</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Højre kolonne -->
     <div class="section2__right">
       <h2 class="section2__title">POP-UP MEYHANE</h2>
       <p>06.08.2025 - 15:00</p>
@@ -31,32 +34,26 @@
     </div>
   </div>
 
-  <!-- Dekoration nederst højre -->
   <img src="/images/kaffekopogkande.webp" alt="Kaffe og Kande" class="section2__decor section2__decor--bottom-right" loading="lazy" />
 </section>
 
 <style>
-  /* Baggrundsfarve og reset */
   body,
   html {
-    margin: 0;
-    padding: 0;
     background-color: var(--Secondary_Sand);
     height: 100%;
     box-sizing: border-box;
   }
 
-  /* Sektion Layout */
   .section2 {
     position: relative;
     max-width: 1280px;
     margin: 0 auto;
     padding: var(--gap4) var(--gap2);
-    box-sizing: border-box;
     overflow: visible;
+    box-sizing: border-box;
   }
 
-  /* Øverste baggrund og titel */
   .section2__header {
     background-color: var(--Secondary_Sand);
     padding: var(--gap2) 0;
@@ -68,15 +65,16 @@
     font-family: var(--font_Charm);
     font-size: 2.5rem;
     color: var(--Black);
-    margin: 0;
   }
 
-  /* Grid layout */
   .section2__grid {
     display: grid;
     grid-template-columns: 10% 40% 40% 10%;
     gap: var(--gap1);
     align-items: start;
+    padding: var(--gap1);
+    background-color: var(--Tertiary_Red);
+    box-sizing: border-box;
   }
 
   .section2__left {
@@ -87,38 +85,34 @@
     grid-column: 3;
   }
 
-  /* Venstre kolonne */
-  .section2__content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: start;
-  }
-
   .section2__menu-image {
     width: 100%;
+    position: relative;
     max-width: 400px;
     margin-bottom: var(--gap1);
-    z-index: 1;
+    z-index: 10;
   }
 
   .section2__description {
-    width: 100%;
-    max-width: 400px;
     font-family: var(--font_Pop);
+    font-size: var(--p_size);
     color: var(--Black);
+    max-width: 400px;
     margin-bottom: var(--gap2);
   }
 
-  /* Book Now-knap som billede */
   .section2__button-container {
     text-align: center;
+  }
+
+  .section2__button-wrapper {
+    position: relative;
+    display: inline-block;
   }
 
   .section2__button-image {
     width: 180px;
     height: auto;
-    margin: 0 auto;
     cursor: pointer;
     transition: transform 0.3s ease;
   }
@@ -127,7 +121,18 @@
     transform: scale(1.05);
   }
 
-  /* Højre kolonne */
+  .section2__button-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font_Pop);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    pointer-events: none;
+  }
+
   .section2__title {
     font-family: var(--font_Charm);
     font-size: var(--h2_size);
@@ -141,18 +146,22 @@
     margin-top: var(--gap2);
   }
 
-  /* Dekorationer */
   .section2__decor {
     position: absolute;
-    z-index: 1;
     pointer-events: none;
+    z-index: 1;
   }
 
   .section2__decor--top-left {
     top: 0;
-    left: 10%;
+    left: 8%;
     width: 200px;
-    z-index: 0;
+  }
+
+  .section2__decor--top-right {
+    top: 0;
+    right: 5%;
+    width: 170px;
   }
 
   .section2__decor--bottom-right {
@@ -161,3 +170,12 @@
     width: 350px;
   }
 </style>
+
+<script>
+  import { createClient } from "@supabase/supabase-js";
+
+  const supabaseUrl = "https://<din-supabase-url>.supabase.co"; // Din projekt-URL
+  const supabaseAnonKey = "<din-anon-key>"; // Din public API-nøgle
+
+  export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+</script>
