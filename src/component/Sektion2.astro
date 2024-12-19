@@ -1,0 +1,152 @@
+---
+import "../styles/global.css"; // Importér global CSS
+
+import { createClient } from "@supabase/supabase-js";
+
+const supabaseUrl = "https://inrchbadbkirfzkcebcg.supabase.co/";
+const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlucmNoYmFkYmtpcmZ6a2NlYmNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjU5NzA4MjYsImV4cCI6MjA0MTU0NjgyNn0.mpSt_VfMJynts4yNhF_lHvJafqeHolxXL7wYKBacfjA";
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+const { data, error } = await supabase.from("product").select("*");
+
+if (error) {
+  console.error("Supabase fejl:", error.message);
+} else {
+  console.log("Supabase data:", data);
+}
+---
+
+<section class="section2">
+  <div><h2 class="topoverskrift">Upcomming Event</h2></div>
+  <!-- Dekoration blåblomst øverst til venstre -->
+
+  <img src="/images/blaablomst.webp" alt="Blå Blomst" class="section2_decor section2_decor--top-left" loading="lazy" />
+
+  <!-- Dekoration vinflaske øverst til højre -->
+  <img src="/images/blaaflaske.webp" alt="Blå Flaske" class="section2_decor section2_decor--top-right" loading="lazy" />
+
+  <img src="/images/kaffekopogkande.webp" alt="Blå Flaske" class="section2_decor section2_decor--bottom-right" loading="lazy" />
+
+  <!-- Grid Container -->
+  <div class="grid_container">
+    <!-- Venstre Grid -->
+    <div class="section2_left">
+      <img src="/images/menu.webp" alt="Menu" class="section2_menu-image" loading="lazy" />
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum expedita ipsum cumque alias, labore iusto sit ut enim obcaecati at, voluptatum voluptate quod exercitationem perferendis dignissimos numquam adipisci facilis esse! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro libero tempore sed sequi commodi asperiores eos incidunt voluptate quos, enim ea! Sunt est delectus modi quia explicabo in. Animi, sed? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum inventore numquam dolorem molestiae quo animi laudantium aliquid eveniet hic quidem nostrum rerum aliquam natus placeat, beatae, rem laboriosam tempore nulla?</p>
+    </div>
+
+    <!-- Højre Grid -->
+    <div class="section2_right">
+      <h2 class="section2_title">POP UP MEYHANE</h2>
+      <p>06.08.2025 - 15:00</p>
+      <p>KITCHEN COLLECTIVE | SLAGTEHUSGADE 11A</p>
+      <p>Event Pris Pr. Person - <strong>300 Kr.</strong></p>
+      <br />
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate inventore distinctio in dolorum ea minus rerum at dicta necessitatibus officia vitae alias nobis mollitia incidunt velit, repellendus sequi maxime odit. Cum quod ut recusandae, provident non officiis minima hic praesentium maiores. Neque omnis, vero illum, id at magnam nulla nemo cum architecto harum quod similique modi ratione corrupti distinctio officiis! Animi impedit cumque ad a quis? Quis ipsum tempora rerum perferendis quo eos tenetur omnis architecto. Illum repudiandae ad earum aperiam harum veritatis mollitia odit dolore sapiente doloremque? Provident, aperiam.</p>
+      <img src="/images/kultbillede.webp" alt="Kult Billede" class="section2_poster" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<style>
+  body,
+  html {
+    background-color: var(--Secondary_Sand);
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .grid_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: var(--gap1);
+    align-items: center;
+    padding: var(--gap1);
+    background-color: var(--Tertiary_Red);
+    box-sizing: border-box;
+    gap: 5%;
+  }
+
+  .section2_left {
+    grid-column: 2;
+    z-index: 1;
+  }
+
+  .section2_right {
+    grid-column: 3;
+    margin-top: 5%;
+  }
+
+  .section2menu-image {
+    width: 100%;
+    position: relative;
+    max-width: 400px;
+    margin-bottom: var(--gap1);
+    z-index: 10;
+  }
+
+  .section2_description {
+    max-width: 400px;
+    margin-bottom: var(--gap2);
+  }
+
+  .section2_button-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font_Pop);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    pointer-events: none;
+  }
+
+  .section2_title {
+    font-family: var(--font_Charm);
+    font-size: var(--h2_size);
+    color: var(--Primary_Blue);
+    margin-bottom: var(--gap1);
+  }
+
+  .section2poster {
+    width: 100%;
+    max-width: 400px;
+    margin-top: var(--gap2);
+  }
+
+  .section2_decor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .section2_decor--top-left {
+    top: 3%;
+    left: 3%;
+    width: 240px;
+  }
+
+  .section2_decor--top-right {
+    top: 2%;
+    right: 5%;
+    width: 220px;
+  }
+
+  .section2_decor--bottom-right {
+    bottom: -155%;
+    right: -0%;
+    width: 350px;
+  }
+  p {
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .topoverskrift {
+    color: var(--Primary_Blue);
+    text-align: center;
+    margin: 3%;
+  }
+</style>
