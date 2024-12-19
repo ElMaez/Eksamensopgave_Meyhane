@@ -31,9 +31,85 @@ console.log(myProduct);
 
 <Layout>
   <Header />
-  <h1>Singleview here</h1>
-  <img src=`/img/productlist/${myProduct.images}` alt="" />
-  <p>{myProduct.slug}</p>
+  <div class="productvis_container">
+    <div class="productimg_container">
+      <img src=`/img/productlist/${myProduct.images}` alt="" />
+    </div>
+    <div class="producttext_container">
+      <h3>{myProduct.titel}</h3>
+      <div class="productpris_container">
+        <p class="prisitem1">{myProduct.from}</p>
+        <p class="prisitem2">{myProduct.price}</p>
+        <p class="taste">{myProduct.taste}</p>
+      </div>
+      <p>{myProduct.about}</p>
+    </div>
+  </div>
   <Recommended />
   <CollageSingleview />
 </Layout>
+
+<style>
+  .productvis_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: var(--gap4);
+
+    height: 500px;
+
+    /* outline: dashed 2px blue; */
+  }
+  .productimg_container {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    justify-items: end;
+    align-items: center;
+  }
+
+  .productimg_container img {
+    width: 90%;
+    max-height: 100%;
+  }
+
+  .producttext_container {
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    padding-top: var(--gap1);
+    padding-right: var(--gap4);
+    /* outline: dashed 2px rgb(255, 0, 0); */
+  }
+
+  .productpris_container {
+    width: 70%;
+    max-width: 300px;
+    padding-top: var(--gap05);
+    border-top: solid 3px var(--Primary_Blue);
+
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: var(--gap1);
+  }
+  .prisitem1,
+  .prisitem2 {
+    grid-column: span 1;
+    grid-row: 1/2;
+  }
+  .prisitem2 {
+    justify-self: end;
+  }
+  .taste {
+    font-style: italic;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
+  h3 {
+    height: 70px;
+  }
+</style>
