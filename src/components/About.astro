@@ -20,10 +20,10 @@ import "../styles/global.css"
     </div>
     <div class="AboutSection">
         <div></div>
-        <div><img src="/img/about4.svg" alt="billede af mennesker og alkohol" class="about4"></div>
+        <div><img src="/img/about4.png" alt="billede af mennesker og alkohol" ></div>
     </div>
-    <div class="About5Section">
-        <div class="about5_container"><img src="/img/about5.svg" alt="billede af mennesker og alkohol" class="about5"></div>
+    <div>
+        <div><img src="/img/about5.svg" alt="billede af mennesker og alkohol" ></div>
     </div>
 </section>
 
@@ -34,6 +34,7 @@ import "../styles/global.css"
         grid-template-rows: repeat(5, 1fr);
         grid-template-columns: 1fr;
       justify-content: space-evenly;
+       height: 1000px; 
     }
  
    
@@ -47,8 +48,8 @@ import "../styles/global.css"
        display: grid;
        grid-template-columns: 1fr 1fr;
        align-items: center;
-       max-height: 70%;
-    
+       grid-column: span 1;
+       grid-row: span 1;
     }
 
     .about2 {
@@ -57,11 +58,16 @@ import "../styles/global.css"
 
     img {
         width: 100%;
-        justify-content: stretch;
     }
 
     p {
         font-size: 1vw;
+    }
+
+    .about4 {
+        border: solid red;
+        width: 200px;
+        height: 200px;
     }
 
     
