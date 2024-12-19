@@ -1,4 +1,11 @@
 ---
+import "../../styles/global.css";
+
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import CollageSingleview from "../../components/CollageSingleview.astro";
+import Recommended from "../../components/Recommended.astro";
+
 export async function getStaticPaths() {
   const data = await fetch(
     "https://inrchbadbkirfzkcebcg.supabase.co/rest/v1/product?select=*",
@@ -10,14 +17,23 @@ export async function getStaticPaths() {
       },
     }
   ).then((reponse) => reponse.json());
-  return data.map((artist) => {
+  return data.map((product) => {
     return {
-      params: { artist: artist.slug },
-      props: { myArtist: artist },
+      params: { product: product.slug },
+      props: { myProduct: product },
     };
   });
 }
 
-const { myArtist } = Astro.props;
-console.log(myArtist);
+const { myProduct } = Astro.props;
+console.log(myProduct);
 ---
+
+<Layout>
+  <Header />
+  <h1>Singleview here</h1>
+  <img src=`/img/productlist/${myProduct.images}` alt="" />
+  <p>{myProduct.slug}</p>
+  <Recommended />
+  <CollageSingleview />
+</Layout>
