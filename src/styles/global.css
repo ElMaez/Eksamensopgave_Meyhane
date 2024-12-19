@@ -22,7 +22,8 @@
   --h1_color: var(--Secondary_Sand);
   --h2_color: var(--Secondary_Sand);
   --h3_color: var(--Secondary_Sand);
-  --p_color: var(--Black);
+  --p_color1: var(--Black);
+  --p_color2: var(--Secondary_Sand);
   --menu_color: var(--Secondary_Sand);
 
   --p_ch: 65ch;
