@@ -70,6 +70,11 @@ p {
   font-size: var(--p_size);
   color: var(--p_color);
 }
+.phvid {
+  font-family: var(--font_Pop);
+  font-size: var(--p_size);
+  color: var(--p_color2);
+}
 li:hover {
   text-decoration: underline 2px var(--Secondary_Sand);
 }
