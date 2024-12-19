@@ -1,10 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import CollageSingleview from "../components/CollageSingleview.astro";
 import "../styles/global.css";
 import Recommended from "../components/Recommended.astro";
 ---
 
 <Layout>
+  <Header />
   <h1>Singleview here</h1>
-  <Recommended></Recommended>
+  <Recommended />
+  <CollageSingleview />
 </Layout>

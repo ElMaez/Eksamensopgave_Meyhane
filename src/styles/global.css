@@ -15,14 +15,15 @@
 
   --h1_size: clamp(1rem, 6vw, 8rem);
   --h2_size: clamp(1rem, 3vw, 2.4rem);
-  --h3_size: 2.1rem;
+  --h3_size: clamp(1rem, 4vw, 2rem);
   --p_size: clamp(0.4rem, 3vw, 1rem);
   --menu_size: clamp(0.4rem, 2.5vw, 1.4rem);
 
   --h1_color: var(--Secondary_Sand);
   --h2_color: var(--Secondary_Sand);
   --h3_color: var(--Secondary_Sand);
-  --p_color: var(--Black);
+  --p_color1: var(--Black);
+  --p_color2: var(--Secondary_Sand);
   --menu_color: var(--Secondary_Sand);
 
   --p_ch: 65ch;
@@ -68,6 +69,11 @@ p {
   font-family: var(--font_Pop);
   font-size: var(--p_size);
   color: var(--p_color);
+}
+.phvid {
+  font-family: var(--font_Pop);
+  font-size: var(--p_size);
+  color: var(--p_color2);
 }
 li:hover {
   text-decoration: underline 2px var(--Secondary_Sand);
