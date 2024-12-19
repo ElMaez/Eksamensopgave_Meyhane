@@ -1,39 +1,71 @@
 ---
 import "../styles/global.css"; // Importér global CSS
 
-import { createClient } from "@supabase/supabase-js";
+// import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = "https://inrchbadbkirfzkcebcg.supabase.co/";
-const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlucmNoYmFkYmtpcmZ6a2NlYmNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjU5NzA4MjYsImV4cCI6MjA0MTU0NjgyNn0.mpSt_VfMJynts4yNhF_lHvJafqeHolxXL7wYKBacfjA";
+// const supabaseUrl = "https://inrchbadbkirfzkcebcg.supabase.co/";
+// const supabaseAnonKey =
+//   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlucmNoYmFkYmtpcmZ6a2NlYmNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjU5NzA4MjYsImV4cCI6MjA0MTU0NjgyNn0.mpSt_VfMJynts4yNhF_lHvJafqeHolxXL7wYKBacfjA";
 
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-const { data, error } = await supabase.from("product").select("*");
+// const { data, error } = await supabase.from("product").select("*");
 
-if (error) {
-  console.error("Supabase fejl:", error.message);
-} else {
-  console.log("Supabase data:", data);
-}
+// if (error) {
+//   console.error("Supabase fejl:", error.message);
+// } else {
+//   console.log("Supabase data:", data);
+// }
 ---
 
 <section class="section2">
   <div><h2 class="topoverskrift">Upcomming Event</h2></div>
   <!-- Dekoration blåblomst øverst til venstre -->
 
-  <img src="/images/blaablomst.webp" alt="Blå Blomst" class="section2_decor section2_decor--top-left" loading="lazy" />
+  <img
+    src="/images/blaablomst.webp"
+    alt="Blå Blomst"
+    class="section2_decor section2_decor--top-left"
+    loading="lazy"
+  />
 
   <!-- Dekoration vinflaske øverst til højre -->
-  <img src="/images/blaaflaske.webp" alt="Blå Flaske" class="section2_decor section2_decor--top-right" loading="lazy" />
+  <img
+    src="/images/blaaflaske.webp"
+    alt="Blå Flaske"
+    class="section2_decor section2_decor--top-right"
+    loading="lazy"
+  />
 
-  <img src="/images/kaffekopogkande.webp" alt="Blå Flaske" class="section2_decor section2_decor--bottom-right" loading="lazy" />
+  <img
+    src="/images/kaffekopogkande.webp"
+    alt="Blå Flaske"
+    class="section2_decor section2_decor--bottom-right"
+    loading="lazy"
+  />
 
   <!-- Grid Container -->
   <div class="grid_container">
     <!-- Venstre Grid -->
     <div class="section2_left">
-      <img src="/images/menu.webp" alt="Menu" class="section2_menu-image" loading="lazy" />
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum expedita ipsum cumque alias, labore iusto sit ut enim obcaecati at, voluptatum voluptate quod exercitationem perferendis dignissimos numquam adipisci facilis esse! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro libero tempore sed sequi commodi asperiores eos incidunt voluptate quos, enim ea! Sunt est delectus modi quia explicabo in. Animi, sed? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum inventore numquam dolorem molestiae quo animi laudantium aliquid eveniet hic quidem nostrum rerum aliquam natus placeat, beatae, rem laboriosam tempore nulla?</p>
+      <img
+        src="/images/menu.webp"
+        alt="Menu"
+        class="section2_menu-image"
+        loading="lazy"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum expedita
+        ipsum cumque alias, labore iusto sit ut enim obcaecati at, voluptatum
+        voluptate quod exercitationem perferendis dignissimos numquam adipisci
+        facilis esse! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Porro libero tempore sed sequi commodi asperiores eos incidunt voluptate
+        quos, enim ea! Sunt est delectus modi quia explicabo in. Animi, sed?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum inventore
+        numquam dolorem molestiae quo animi laudantium aliquid eveniet hic
+        quidem nostrum rerum aliquam natus placeat, beatae, rem laboriosam
+        tempore nulla?
+      </p>
     </div>
 
     <!-- Højre Grid -->
@@ -43,8 +75,24 @@ if (error) {
       <p>KITCHEN COLLECTIVE | SLAGTEHUSGADE 11A</p>
       <p>Event Pris Pr. Person - <strong>300 Kr.</strong></p>
       <br />
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate inventore distinctio in dolorum ea minus rerum at dicta necessitatibus officia vitae alias nobis mollitia incidunt velit, repellendus sequi maxime odit. Cum quod ut recusandae, provident non officiis minima hic praesentium maiores. Neque omnis, vero illum, id at magnam nulla nemo cum architecto harum quod similique modi ratione corrupti distinctio officiis! Animi impedit cumque ad a quis? Quis ipsum tempora rerum perferendis quo eos tenetur omnis architecto. Illum repudiandae ad earum aperiam harum veritatis mollitia odit dolore sapiente doloremque? Provident, aperiam.</p>
-      <img src="/images/kultbillede.webp" alt="Kult Billede" class="section2_poster" loading="lazy" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+        inventore distinctio in dolorum ea minus rerum at dicta necessitatibus
+        officia vitae alias nobis mollitia incidunt velit, repellendus sequi
+        maxime odit. Cum quod ut recusandae, provident non officiis minima hic
+        praesentium maiores. Neque omnis, vero illum, id at magnam nulla nemo
+        cum architecto harum quod similique modi ratione corrupti distinctio
+        officiis! Animi impedit cumque ad a quis? Quis ipsum tempora rerum
+        perferendis quo eos tenetur omnis architecto. Illum repudiandae ad earum
+        aperiam harum veritatis mollitia odit dolore sapiente doloremque?
+        Provident, aperiam.
+      </p>
+      <img
+        src="/images/kultbillede.webp"
+        alt="Kult Billede"
+        class="section2_poster"
+        loading="lazy"
+      />
     </div>
   </div>
 </section>
