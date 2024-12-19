@@ -14,7 +14,6 @@ import "../styles/global.css";
         <li><a href="/booking">Booking</a></li>
         <li><a href="#">Event</a></li>
         <li><a href="/about">About</a></li>
-        <li><a href="/singleview">Raki & Wine</a></li>
       </ul>
     </nav>
     <a href="/" class="header_icon_container">
@@ -25,7 +24,10 @@ import "../styles/global.css";
   <div class="hero">
     <h1>Pop-up Meyhane Copenhagen</h1>
     <h2>Next Event 06-08-2025</h2>
-    <h3>knap her</h3>
+    <a href="#" class="button">
+      <img src="/img/SVG/calltoaction.svg" alt="" />
+      <h3>Book Now</h3>
+    </a>
   </div>
 </div>
 
@@ -40,11 +42,39 @@ import "../styles/global.css";
     text-align: center;
     margin: auto;
   }
-  .hero h3 {
+  .button {
+    max-width: 30%;
+    height: fit-content;
+
     grid-row: 4/5;
     text-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    justify-self: center;
+  }
+  .button img {
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    z-index: 1;
+  }
+  .button h3 {
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    z-index: 2;
+
+    justify-self: center;
+    align-self: center;
   }
 
+  .button:hover {
+    max-width: 40%;
+    scale: 105%;
+  }
   .hero_container {
     display: grid;
     grid-template-columns: 1fr;
@@ -61,6 +91,7 @@ import "../styles/global.css";
     grid-column: 1/-1;
     grid-row: 1/-1;
     z-index: 1;
+
     background-image: url("/img/hero.webp");
     background-repeat: no-repeat;
     background-size: 100%;
