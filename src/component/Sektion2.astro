@@ -1,20 +1,5 @@
 ---
 import "../styles/global.css"; // Importér global CSS
-
-import { createClient } from "@supabase/supabase-js";
-
-const supabaseUrl = "https://inrchbadbkirfzkcebcg.supabase.co/";
-const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlucmNoYmFkYmtpcmZ6a2NlYmNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjU5NzA4MjYsImV4cCI6MjA0MTU0NjgyNn0.mpSt_VfMJynts4yNhF_lHvJafqeHolxXL7wYKBacfjA";
-
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
-const { data, error } = await supabase.from("product").select("*");
-
-if (error) {
-  console.error("Supabase fejl:", error.message);
-} else {
-  console.log("Supabase data:", data);
-}
 ---
 
 <section class="section2">
@@ -22,14 +7,37 @@ if (error) {
 
   <!-- Grid Container -->
   <div class="grid_container">
-    <img src="/images/blaablomst.webp" alt="Blå Blomst" class="section2_decor section2_decor--top-left" loading="lazy" />
-    <img src="/images/blaaflaske.webp" alt="Blå Flaske" class="section2_decor section2_decor--top-right" loading="lazy" />
-    <img src="/images/kaffekopogkande.webp" alt="Kaffekop og Kande" class="section2_decor section2_decor--bottom-right" loading="lazy" />
+    <img
+      src="/images/blaablomst.webp"
+      alt="Blå Blomst"
+      class="section2_decor section2_decor--top-left"
+      loading="lazy"
+    />
+    <img
+      src="/images/blaaflaske.webp"
+      alt="Blå Flaske"
+      class="section2_decor section2_decor--top-right"
+      loading="lazy"
+    />
+    <img
+      src="/images/kaffekopogkande.webp"
+      alt="Kaffekop og Kande"
+      class="section2_decor section2_decor--bottom-right"
+      loading="lazy"
+    />
 
     <!-- Left Grid Section -->
     <div class="section2_left">
-      <img src="/images/menu.webp" alt="Menu" class="section2_menu-image" loading="lazy" />
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum expedita ipsum cumque alias, labore iusto sit ut enim obcaecati at...</p>
+      <img
+        src="/images/menu.webp"
+        alt="Menu"
+        class="section2_menu-image"
+        loading="lazy"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum expedita
+        ipsum cumque alias, labore iusto sit ut enim obcaecati at...
+      </p>
     </div>
 
     <!-- Right Grid Section -->
@@ -40,7 +48,12 @@ if (error) {
       <p>Event Pris Pr. Person - <strong>300 Kr.</strong></p>
       <br />
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-      <img src="/images/kultbillede.webp" alt="Kult Billede" class="section2_poster" loading="lazy" />
+      <img
+        src="/images/kultbillede.webp"
+        alt="Kult Billede"
+        class="section2_poster"
+        loading="lazy"
+      />
     </div>
   </div>
 </section>
