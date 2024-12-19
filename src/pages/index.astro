@@ -5,6 +5,7 @@ import "../styles/global.css";
 import Collage from "../components/Collage.astro";
 import Review from "../components/Review.astro";
 import Sektion2 from "../component/Sektion2.astro";
+import IndexFooter from "../components/IndexFooter.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -25,7 +26,8 @@ console.log(data);
 
 <Layout class="index_container">
   <Hero class="index_hero" />
-  <Sektion2 />
+  <!-- <Sektion2 /> -->
   <Collage />
   <Review />
+  <IndexFooter />
 </Layout>
