@@ -20,11 +20,11 @@ import "../styles/global.css";
 <p>In the heart of Copenhagen, a Turkish creator is sharing the soul of his culture through a unique meyhane pop-up. Born and raised in Turkey, he grew up with the tradition of gathering around tables filled with meze, raki, and lively conversations. Now, he’s bringing this experience to those who miss the warmth of home or are curious about Turkish culture.
     For him, the pop-up is a way to connect people—both Turkish expatriates and locals—through the flavors, music, and stories that define a meyhane. Every detail, from the authentic dishes to the convivial atmosphere, is crafted with care to reflect his heritage.</p>
 <a href="#">Læs mere her ...</a>
-    <p>Contact us. <br>
+    <p><strong>Contact us.</strong> <br>
         (+45) 44 44 44 44<br>
         Mon-Thurs: 10:00-16:00<br>
         Fri-Sun: 12:00-14:00<br>
-        Hismailtocontact@gmail.com</p>
+        <strong>Hismailtocontact@gmail.com</strong></p>
     </div>
   </section>
 </div>
@@ -97,7 +97,7 @@ import "../styles/global.css";
     background-color: var(--Primary_Blue);
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 55%;
     grid-template-rows: 70% 1fr;
   }
 .about_img {
@@ -114,9 +114,17 @@ import "../styles/global.css";
     grid-column: 2/-1;
     grid-row: 1/-1;
     padding: var(--gap1);
+
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--gap1);
 }
 
-.text_container  {
+.text_container p {
     color: var(--p_color2);
+    width: 65ch;
+}
+h3 span {
+    margin-left: 25%;
 }
 </style>
