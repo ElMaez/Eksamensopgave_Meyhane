@@ -22,6 +22,10 @@
   --h1_color: var(--Secondary_Sand);
   --h2_color: var(--Secondary_Sand);
   --h3_color: var(--Secondary_Sand);
+
+  --h2_colorB: var(--Primary_Blue);
+  --h3_colorB: var(--Primary_Blue);
+
   --p_color1: var(--Black);
   --p_color2: var(--Secondary_Sand);
   --menu_color: var(--Secondary_Sand);
@@ -61,10 +65,16 @@ h2 {
   font-size: var(--h2_size);
   color: var(--h2_color);
 }
+.h2B {
+  color: var(--h2_colorB);
+}
 h3 {
   font-family: var(--font_Charm);
   font-size: var(--h3_size);
   color: var(--h3_color);
+}
+.h3B {
+  color: var(--h2_colorB);
 }
 p {
   font-family: var(--font_Pop);
